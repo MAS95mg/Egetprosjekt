@@ -1,0 +1,35 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    background-color: #26323a;
+}
+div.page{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 3fr;
+    grid-template-rows: 50px 50px 10fr 50px;
+    grid-template-areas: 'header header'
+                         'menu  main'
+                         'menu  main'
+                         'footer footer'
+                        
+}
+div.header{
+    background-color: #161f25;
+    grid-area: header;
+    
+
+}
+div.main{
+    background-color: #446072;
+    grid-area: main;
+}
+div.footer{
+    background-color: #161f25;    
+    grid-area: footer;
+}
+div.menu{
+    background-color: #26323a;
+    grid-area: menu;   
+}
+

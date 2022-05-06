@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleegetprosjekt.css">
+</head>
+<body>
+ 
+      <div id="app">
+
+        
+      </div>
+<script>
+
+
+let CV = '';
+let CVindex = 0;
+let skoleindex = 0;
+let skole ='';
+let egenindex = 0;
+let egenskaper = '';
+
+show()
+
+function show(){
+
+    let html = '';
+    
+    html += `<div class="page";>
+        <div class="header">
+            <h1 style="color:whitesmoke; text-align:center; margin: auto; padding-top: 8px;">Portfolio MAS</h1>
+        </div>
+        <div class="menu;">
+            <h2 style="color:whitesmoke; text-align: center;">Navigation</h2>
+            
+            <a href="https://youtu.be/iik25wqIuFo" rel="noopener noreferrer"target="_blank"><b title="Youtube"; style="color:whitesmoke; padding-left: 12px;">Youtube</b></a>
+            <br>
+            <a href="https://youtu.be/iik25wqIuFo" rel="noopener noreferrer"target="_blank"><b title="Instagram"; style="color:whitesmoke; padding-left: 12px;">Instagram</b></a>
+            <br>
+            <a href="https://youtu.be/iik25wqIuFo" rel="noopener noreferrer"target="_blank"><b title="Facebook"; style="color:whitesmoke; padding-left: 12px;">Facebook</b></a>
+        </div>
+        
+        <div class="main"; style="padding-left: 15px; padding-right: 50px;font-size: 2.5vh; color:white">
+            
+            <button class="button" onclick="showcv()">Erfaring</button>
+            <button class="button" onclick="showskole()">Skolegang</button>
+            <button class="button" onclick="showegen()">Fritid</button>
+            <p>${CV}
+            <p>${skole}
+            <p>${egenskaper}
+        </div>
+    </div>
+        <div class="footer">
+            <h4 style="text-align: end; padding-right: 5px; color:whitesmoke;">Copyright©2022 MAS</p>
+        </div>`
+    
+    document.getElementById('app').innerHTML = html;
+}
+
+function lukkCV(){
+    CV = ``;
+    show();
+}
+
+function showcv(){
+    CV = `
+    Erfaring: 
+    <li> tekst
+    <li> tekst
+        <li>  tekst
+            <li>  tekst <br>
+                
+    `
+    
+    show();
+}
+function showskole(){
+    skole = `
+    Skolegang:
+    <li> tekst2
+    <li> tekst2
+        <li>  tekst2
+            <li>  tekst2
+    `
+    show();
+}
+function showegen(){
+    egenskaper = `
+    Egenskaper
+    <li> tekst3
+    <li> tekst3
+        <li>  tekst3
+            <li>  tekst3
+    `
+    show();
+}
+</script>
+
+      
+</body>
+</html>
